@@ -1,0 +1,234 @@
+:root {
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --radius: 16px;
+  --max-width: 960px;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --text: #f1f5f9;
+  --text-light: #94a3b8;
+  --border: #334155;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* 顶部栏 */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.lang-select {
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 头部 */
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+.subtitle { color: var(--text-light); max-width: 600px; margin: 0 auto; }
+
+/* 主区域 */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 广告 */
+.ad-container { margin: 1.5rem 0; text-align: center; }
+.ad-placeholder {
+  background: var(--border);
+  color: var(--text-light);
+  padding: 2rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  border: 1px dashed var(--text-light);
+}
+
+/* 工具卡片网格 */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.tool-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.tool-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+.tool-icon {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  background: var(--bg);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: var(--primary);
+}
+.tool-name { margin: 0.5rem 0 0.3rem; font-size: 1.1rem; }
+.tool-desc { color: var(--text-light); font-size: 0.9rem; margin: 0; }
+
+/* 信任标语 */
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  color: var(--text-light);
+}
+.badge { display: flex; align-items: center; gap: 0.5rem; }
+
+/* FAQ */
+.faq { margin: 2rem 0; }
+.faq h2 { text-align: center; }
+.faq details {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.faq summary { font-weight: 600; cursor: pointer; }
+
+/* 工具页通用样式 */
+.tool-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.tool-page h1 { text-align: center; margin-bottom: 1.5rem; }
+.tool-workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 600px) {
+  .tool-workspace { grid-template-columns: 1fr; }
+}
+textarea {
+  width: 100%;
+  height: 300px;
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  resize: vertical;
+}
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:hover { background: var(--primary-hover); }
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.btn-outline:hover { background: var(--border); }
+.copy-btn {
+  background: #10b981;
+}
+.copy-btn:hover { background: #059669; }
+
+/* 页脚 */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+footer nav a {
+  margin: 0 0.8rem;
+  color: var(--text-light);
+  text-decoration: none;
+}
+footer nav a:hover { text-decoration: underline; }
+
+/* 返回链接 */
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+}
