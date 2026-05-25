@@ -6,9 +6,21 @@
   <meta name="description" content="Free online text processing tools. JSON formatter, Base64 encoder, Markdown converter, URL encoder, and more. Private, secure, runs in your browser.">
   <title>Text Toolkit - Free Online Text Tools</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2R40RRRQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N2R40RRRQ0');
+  </script>
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8884517238295741"
+       crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- 顶部栏：语言 + 深浅色切换 -->
   <div class="top-bar">
     <select id="languageSelect" class="lang-select">
       <option value="en">English</option>
@@ -26,12 +38,10 @@
   </header>
 
   <main>
-    <!-- 广告位1：标题下方 -->
     <div class="ad-container" id="ad-top">
       <div class="ad-placeholder">Ad Space - Google AdSense</div>
     </div>
 
-    <!-- 工具卡片网格 -->
     <section class="tools-grid" id="toolsGrid">
       <a href="tools/json-formatter.html" class="tool-card">
         <span class="tool-icon">{ }</span>
@@ -65,19 +75,16 @@
       </a>
     </section>
 
-    <!-- 广告位2：工具列表下方 -->
     <div class="ad-container" id="ad-middle">
       <div class="ad-placeholder">Ad Space - Google AdSense</div>
     </div>
 
-    <!-- 信任标语 -->
     <div class="trust-badges">
       <div class="badge">🔒 <span data-i18n="privacyFirst">Privacy First. Everything runs locally.</span></div>
       <div class="badge">⚡ <span data-i18n="noUpload">No Upload. No server processing.</span></div>
       <div class="badge">🆓 <span data-i18n="free">100% Free. No signup.</span></div>
     </div>
 
-    <!-- FAQ -->
     <section class="faq">
       <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
       <details>
